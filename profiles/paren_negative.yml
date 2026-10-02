@@ -1,0 +1,25 @@
+# EU number format (1.234,56), debits in parentheses, dd.mm.yyyy dates.
+id: paren_negative
+version: 1
+description: Parenthesised negatives with EU decimal commas (EUR)
+fingerprint:
+  required_tokens: ["Account statement", "Transaction details", "Amount (EUR)"]
+currency: EUR
+columns:
+  - {role: posted, header: "Booking date"}
+  - {role: description, header: "Transaction details"}
+  - {role: amount, header: "Amount (EUR)"}
+  - {role: balance, header: "Balance (EUR)"}
+locale: comma
+date_format: "%d.%m.%Y"
+amount_mode: signed
+balance_policy: every_row
+period:
+  pattern: 'Period (\S+) - (\S+)'
+  format: "%d.%m.%Y"
+opening: {label: "Previous balance"}
+closing: {label: "New balance"}
+account: {label: "IBAN"}
+rows:
+  skip_patterns: ['^\*\*\*']
+  stop_patterns: ['^Page \d+ of \d+$', '^New balance']

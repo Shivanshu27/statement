@@ -1,0 +1,27 @@
+# Onboarded by the /add-layout skill — see docs/onboarding/split_zero_filled.md.
+# Separate Debit/Credit columns that print 0.00 in the unused leg (INV-10),
+# ISO dates, brought/carried-forward rows and a per-page total line.
+id: split_zero_filled
+version: 2
+description: Split debit/credit with zero-filled legs and page totals (GBP)
+fingerprint:
+  required_tokens: ["Current account statement", "Sort code"]
+currency: GBP
+columns:
+  - {role: posted, header: "Date"}
+  - {role: description, header: "Details"}
+  - {role: debit, header: "Debit"}
+  - {role: credit, header: "Credit"}
+  - {role: balance, header: "Balance"}
+locale: dot
+date_format: "%Y-%m-%d"
+amount_mode: split
+balance_policy: every_row
+period:
+  pattern: 'From (\d{4}-\d{2}-\d{2}) to (\d{4}-\d{2}-\d{2})'
+  format: "%Y-%m-%d"
+opening: {label: "Balance brought forward"}
+closing: {label: "Closing balance"}
+rows:
+  skip_patterns: ['^Balance brought forward', '^\*\*\*']
+  stop_patterns: ['^Page total', '^Page \d+ of \d+$']

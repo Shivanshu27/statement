@@ -1,0 +1,27 @@
+# One amount column with Dr/Cr suffix; dates print without a year and only on
+# the first row of each day; opening balance is a "Balance B/F" table row.
+id: drcr_suffix
+version: 1
+description: Dr/Cr suffixed amounts, year-less dates carried forward (INR)
+fingerprint:
+  required_tokens: ["Account Statement", "Particulars", "Amount (INR)"]
+currency: INR
+columns:
+  - {role: posted, header: "Date"}
+  - {role: description, header: "Particulars"}
+  - {role: amount, header: "Amount (INR)"}
+  - {role: balance, header: "Balance (INR)"}
+locale: dot
+date_format: "%d %b"
+amount_mode: suffix
+balance_policy: every_row
+period:
+  pattern: 'Period: (\d{2} \w{3} \d{4}) to (\d{2} \w{3} \d{4})'
+  format: "%d %b %Y"
+opening: {label: "Balance B/F"}
+closing: {label: "Closing Balance"}
+account: {label: "A/c No."}
+rows:
+  skip_patterns: ['^Balance B/F', '^\*\*\*']
+  stop_patterns: ['^Page \d+ of \d+$', '^Closing Balance']
+  date_carry_forward: true

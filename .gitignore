@@ -1,0 +1,15 @@
+.venv/
+.uv-cache/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.hypothesis/
+# generated, reproducible from seeds
+corpus/
+runs/
+# never commit real statements (BUILD-PLAN §F4)
+private/
+*.env

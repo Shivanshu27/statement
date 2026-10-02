@@ -1,0 +1,258 @@
+{
+ "meta": {
+  "layout": "split_zero_filled",
+  "seed": 10004,
+  "split": "canary",
+  "forge_version": 1
+ },
+ "statement": {
+  "doc_id": "091478d23d97ee20ccb18cdd07280c36bf584dc39f60d613e1ec1a5200a6f8bb",
+  "account": "XXXX2105",
+  "currency": "GBP",
+  "period_start": "2024-06-13",
+  "period_end": "2024-07-15",
+  "opening_balance": "23499.82",
+  "closing_balance": "27315.18",
+  "balance_policy": "every_row",
+  "transactions": [
+   {
+    "seq": 0,
+    "posted": "2024-06-13",
+    "value_date": null,
+    "description": "CARD PURCHASE APOLLO PHARMACY 7571",
+    "debit": "53.02",
+    "credit": "0",
+    "balance": "23446.80",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 1,
+    "posted": "2024-06-16",
+    "value_date": null,
+    "description": "CARD PURCHASE NETFLIX 4702",
+    "debit": "117.89",
+    "credit": "0",
+    "balance": "23328.91",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 2,
+    "posted": "2024-06-16",
+    "value_date": null,
+    "description": "CARD PURCHASE STARBUCKS 4418",
+    "debit": "66.11",
+    "credit": "0",
+    "balance": "23262.80",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 3,
+    "posted": "2024-06-17",
+    "value_date": null,
+    "description": "CARD PURCHASE DECATHLON 6746",
+    "debit": "31.67",
+    "credit": "0",
+    "balance": "23231.13",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 4,
+    "posted": "2024-06-18",
+    "value_date": null,
+    "description": "CARD PURCHASE RELIANCE FRESH 3084",
+    "debit": "17.47",
+    "credit": "0",
+    "balance": "23213.66",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 5,
+    "posted": "2024-06-20",
+    "value_date": null,
+    "description": "POS 896614 ZOMATO STORE 10",
+    "debit": "114.43",
+    "credit": "0",
+    "balance": "23099.23",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 6,
+    "posted": "2024-06-21",
+    "value_date": null,
+    "description": "POS 417017 CHAI POINT STORE 39",
+    "debit": "482.94",
+    "credit": "0",
+    "balance": "22616.29",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 7,
+    "posted": "2024-06-22",
+    "value_date": null,
+    "description": "POS 917901 ZOMATO STORE 69",
+    "debit": "1025.56",
+    "credit": "0",
+    "balance": "21590.73",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 8,
+    "posted": "2024-06-23",
+    "value_date": null,
+    "description": "REFUND TATA POWER ORDER 10306763",
+    "debit": "0",
+    "credit": "36.48",
+    "balance": "21627.21",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 9,
+    "posted": "2024-06-23",
+    "value_date": null,
+    "description": "ATM WDL 321931 CASH WITHDRAWAL",
+    "debit": "340.00",
+    "credit": "0",
+    "balance": "21287.21",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 10,
+    "posted": "2024-06-28",
+    "value_date": null,
+    "description": "REFUND ZOMATO ORDER 84124644",
+    "debit": "0",
+    "credit": "101.26",
+    "balance": "21388.47",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 11,
+    "posted": "2024-07-01",
+    "value_date": null,
+    "description": "UPI CR FROM VIKRAM MEHTA 53126436 SPLIT BILL",
+    "debit": "0",
+    "credit": "901.29",
+    "balance": "22289.76",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 12,
+    "posted": "2024-07-02",
+    "value_date": null,
+    "description": "CARD PURCHASE BESCOM 7774",
+    "debit": "55.45",
+    "credit": "0",
+    "balance": "22234.31",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 13,
+    "posted": "2024-07-02",
+    "value_date": null,
+    "description": "CARD PURCHASE BESCOM 7774",
+    "debit": "55.45",
+    "credit": "0",
+    "balance": "22178.86",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 14,
+    "posted": "2024-07-07",
+    "value_date": null,
+    "description": "CARD PURCHASE RELIANCE FRESH 7650",
+    "debit": "24.34",
+    "credit": "0",
+    "balance": "22154.52",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 15,
+    "posted": "2024-07-11",
+    "value_date": null,
+    "description": "CARD PURCHASE ZOMATO 5937",
+    "debit": "149.95",
+    "credit": "0",
+    "balance": "22004.57",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 16,
+    "posted": "2024-07-12",
+    "value_date": null,
+    "description": "CARD PURCHASE ZOMATO 7823",
+    "debit": "122.32",
+    "credit": "0",
+    "balance": "21882.25",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 17,
+    "posted": "2024-07-13",
+    "value_date": null,
+    "description": "UPI CR FROM ANANYA RAO 94734996 SPLIT BILL",
+    "debit": "0",
+    "credit": "715.53",
+    "balance": "22597.78",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 18,
+    "posted": "2024-07-14",
+    "value_date": null,
+    "description": "CARD PURCHASE DMART 1028",
+    "debit": "62.19",
+    "credit": "0",
+    "balance": "22535.59",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 19,
+    "posted": "2024-07-15",
+    "value_date": null,
+    "description": "DEBIT CARD ANNUAL FEE",
+    "debit": "41.19",
+    "credit": "0",
+    "balance": "22494.40",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 20,
+    "posted": "2024-07-15",
+    "value_date": null,
+    "description": "NEFT CR 7778129237 LITWARE INC SALARY",
+    "debit": "0",
+    "credit": "4820.78",
+    "balance": "27315.18",
+    "reference": null,
+    "source": null
+   }
+  ],
+  "provenance": {
+   "tier": 0,
+   "profile_id": "forge:split_zero_filled",
+   "profile_version": null,
+   "model_id": null,
+   "prompt_hash": null
+  }
+ }
+}

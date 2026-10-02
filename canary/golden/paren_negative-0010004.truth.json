@@ -1,0 +1,203 @@
+{
+ "meta": {
+  "layout": "paren_negative",
+  "seed": 10004,
+  "split": "canary",
+  "forge_version": 1
+ },
+ "statement": {
+  "doc_id": "34d312cca270e948c455a67bbc4b680d815862a68217fa4af6afac290f0bfb0c",
+  "account": "XXXX2746",
+  "currency": "EUR",
+  "period_start": "2025-10-19",
+  "period_end": "2025-11-24",
+  "opening_balance": "15214.36",
+  "closing_balance": "19455.01",
+  "balance_policy": "every_row",
+  "transactions": [
+   {
+    "seq": 0,
+    "posted": "2025-10-23",
+    "value_date": null,
+    "description": "POS 823702 IRCTC STORE 95",
+    "debit": "822.13",
+    "credit": "0",
+    "balance": "14392.23",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 1,
+    "posted": "2025-10-23",
+    "value_date": null,
+    "description": "CARD PURCHASE NETFLIX 5489",
+    "debit": "56.73",
+    "credit": "0",
+    "balance": "14335.50",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 2,
+    "posted": "2025-10-23",
+    "value_date": null,
+    "description": "CARD PURCHASE FLIPKART 7168",
+    "debit": "137.88",
+    "credit": "0",
+    "balance": "14197.62",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 3,
+    "posted": "2025-10-23",
+    "value_date": null,
+    "description": "UPI CR FROM MEERA IYER 51110198 SPLIT BILL",
+    "debit": "0",
+    "credit": "736.58",
+    "balance": "14934.20",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 4,
+    "posted": "2025-10-26",
+    "value_date": null,
+    "description": "CARD PURCHASE STARBUCKS 3105",
+    "debit": "145.78",
+    "credit": "0",
+    "balance": "14788.42",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 5,
+    "posted": "2025-10-27",
+    "value_date": null,
+    "description": "NEFT CR 7799884511 CONTOSO SYSTEMS SALARY",
+    "debit": "0",
+    "credit": "6503.78",
+    "balance": "21292.20",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 6,
+    "posted": "2025-10-27",
+    "value_date": null,
+    "description": "POS 990007 CHAI POINT STORE 11",
+    "debit": "260.88",
+    "credit": "0",
+    "balance": "21031.32",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 7,
+    "posted": "2025-10-28",
+    "value_date": null,
+    "description": "CARD PURCHASE OLA 7846",
+    "debit": "72.32",
+    "credit": "0",
+    "balance": "20959.00",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 8,
+    "posted": "2025-10-29",
+    "value_date": null,
+    "description": "POS 977512 DECATHLON STORE 23",
+    "debit": "1014.78",
+    "credit": "0",
+    "balance": "19944.22",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 9,
+    "posted": "2025-10-29",
+    "value_date": null,
+    "description": "REFUND UBER ORDER 98710975",
+    "debit": "0",
+    "credit": "67.22",
+    "balance": "20011.44",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 10,
+    "posted": "2025-11-01",
+    "value_date": null,
+    "description": "CARD PURCHASE ZOMATO 2592",
+    "debit": "121.54",
+    "credit": "0",
+    "balance": "19889.90",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 11,
+    "posted": "2025-11-01",
+    "value_date": null,
+    "description": "CARD PURCHASE ZOMATO 2592",
+    "debit": "121.54",
+    "credit": "0",
+    "balance": "19768.36",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 12,
+    "posted": "2025-11-01",
+    "value_date": null,
+    "description": "CARD PURCHASE UBER 5365",
+    "debit": "91.30",
+    "credit": "0",
+    "balance": "19677.06",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 13,
+    "posted": "2025-11-06",
+    "value_date": null,
+    "description": "CARD PURCHASE RELIANCE FRESH 4936",
+    "debit": "137.05",
+    "credit": "0",
+    "balance": "19540.01",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 14,
+    "posted": "2025-11-08",
+    "value_date": null,
+    "description": "CARD PURCHASE MAKEMYTRIP 2365",
+    "debit": "54.23",
+    "credit": "0",
+    "balance": "19485.78",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 15,
+    "posted": "2025-11-14",
+    "value_date": null,
+    "description": "CARD PURCHASE JIO 7984",
+    "debit": "30.77",
+    "credit": "0",
+    "balance": "19455.01",
+    "reference": null,
+    "source": null
+   }
+  ],
+  "provenance": {
+   "tier": 0,
+   "profile_id": "forge:paren_negative",
+   "profile_version": null,
+   "model_id": null,
+   "prompt_hash": null
+  }
+ }
+}

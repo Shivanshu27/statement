@@ -1,0 +1,81 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+env:
+  UV_PYTHON: "3.12"
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync --frozen
+      - run: uv run --frozen ruff check src tests scripts
+      - run: uv run --frozen ruff format --check src tests scripts
+      - run: uv run --frozen mypy
+      - run: uv run --frozen lint-imports
+      - name: guards (INV tests, no float, no stray PDFs, public lockfile)
+        run: |
+          uv run --frozen python scripts/check_inv_tests.py
+          uv run --frozen python scripts/check_no_float.py
+          uv run --frozen python scripts/check_no_pdfs.py
+          uv run --frozen python scripts/check_lockfile_registry.py
+      - run: uv run --frozen pytest --cov=statement --cov-report=term-missing
+
+  # §D4: code changes are judged by replaying the deterministic layer, never
+  # by calling the model again (drift would hide regressions).
+  regress:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync --frozen
+      - run: uv run --frozen statement forge --split dev --out corpus/dev
+      - run: uv run --frozen statement replay corpus/dev --out /tmp/after.jsonl
+      - name: baseline at merge base
+        run: |
+          git worktree add /tmp/base "$(git merge-base origin/${{ github.base_ref }} HEAD)"
+          cd /tmp/base && uv sync --frozen
+          uv run --frozen statement replay "$GITHUB_WORKSPACE/corpus/dev" --out /tmp/before.jsonl
+      - run: cmp /tmp/before.jsonl /tmp/after.jsonl || (diff <(head -c 4000 /tmp/before.jsonl) <(head -c 4000 /tmp/after.jsonl); exit 1)
+
+  # §E3: an onboarding agent's branch may only touch profile data.
+  guard-paths:
+    if: github.event_name == 'pull_request' && startsWith(github.head_ref, 'onboard/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync --frozen
+      - run: uv run --frozen python scripts/guard_paths.py $(git diff --name-only origin/${{ github.base_ref }}...HEAD)
+
+  # §E3: the holdout is generated here from a secret the agent never sees,
+  # and the real numbers are posted on the PR.
+  holdout:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    env:
+      STATEMENT_HOLDOUT_SECRET: ${{ secrets.STATEMENT_HOLDOUT_SECRET }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync --frozen
+      - if: env.STATEMENT_HOLDOUT_SECRET != ''
+        run: |
+          uv run --frozen statement forge --split holdout --n 40 --out corpus/holdout
+          uv run --frozen statement eval corpus/holdout --out runs | tee holdout.txt
+      - if: env.STATEMENT_HOLDOUT_SECRET != ''
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: gh pr comment ${{ github.event.pull_request.number }} --body-file holdout.txt

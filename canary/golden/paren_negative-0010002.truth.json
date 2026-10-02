@@ -1,0 +1,137 @@
+{
+ "meta": {
+  "layout": "paren_negative",
+  "seed": 10002,
+  "split": "canary",
+  "forge_version": 1
+ },
+ "statement": {
+  "doc_id": "1d4179eda7623042b88c4091390105df8a3350a3ba6e87b2afbd12464f01fffb",
+  "account": "XXXX9436",
+  "currency": "EUR",
+  "period_start": "2024-03-19",
+  "period_end": "2024-04-24",
+  "opening_balance": "20456.57",
+  "closing_balance": "27059.94",
+  "balance_policy": "every_row",
+  "transactions": [
+   {
+    "seq": 0,
+    "posted": "2024-03-24",
+    "value_date": null,
+    "description": "REFUND BIGBASKET ORDER 62203024",
+    "debit": "0",
+    "credit": "131.36",
+    "balance": "20587.93",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 1,
+    "posted": "2024-03-25",
+    "value_date": null,
+    "description": "CARD PURCHASE BOOKMYSHOW 1488",
+    "debit": "119.70",
+    "credit": "0",
+    "balance": "20468.23",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 2,
+    "posted": "2024-04-02",
+    "value_date": null,
+    "description": "SMS ALERT CHARGES",
+    "debit": "92.80",
+    "credit": "0",
+    "balance": "20375.43",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 3,
+    "posted": "2024-04-08",
+    "value_date": null,
+    "description": "SMS ALERT CHARGES",
+    "debit": "138.50",
+    "credit": "0",
+    "balance": "20236.93",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 4,
+    "posted": "2024-04-09",
+    "value_date": null,
+    "description": "CARD PURCHASE TATA POWER 0450",
+    "debit": "124.70",
+    "credit": "0",
+    "balance": "20112.23",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 5,
+    "posted": "2024-04-19",
+    "value_date": null,
+    "description": "NEFT CR 4055450927 NORTHWIND LABS PVT LTD SALARY",
+    "debit": "0",
+    "credit": "7497.58",
+    "balance": "27609.81",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 6,
+    "posted": "2024-04-20",
+    "value_date": null,
+    "description": "CARD PURCHASE IRCTC 9595",
+    "debit": "52.19",
+    "credit": "0",
+    "balance": "27557.62",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 7,
+    "posted": "2024-04-22",
+    "value_date": null,
+    "description": "ATM WDL 330208 CASH WITHDRAWAL",
+    "debit": "320.00",
+    "credit": "0",
+    "balance": "27237.62",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 8,
+    "posted": "2024-04-23",
+    "value_date": null,
+    "description": "CARD PURCHASE OLA 2765",
+    "debit": "66.87",
+    "credit": "0",
+    "balance": "27170.75",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 9,
+    "posted": "2024-04-24",
+    "value_date": null,
+    "description": "CARD PURCHASE BIGBASKET 5883",
+    "debit": "110.81",
+    "credit": "0",
+    "balance": "27059.94",
+    "reference": null,
+    "source": null
+   }
+  ],
+  "provenance": {
+   "tier": 0,
+   "profile_id": "forge:paren_negative",
+   "profile_version": null,
+   "model_id": null,
+   "prompt_hash": null
+  }
+ }
+}

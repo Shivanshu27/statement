@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "layout": "no_balance",
+  "seed": 10003,
+  "split": "canary",
+  "forge_version": 1
+ },
+ "statement": {
+  "doc_id": "1ba762c8c07e5deda718a5e0059fe743f8dddcd20d8b345b8ac9ea0c19c60861",
+  "account": "XXXX1322",
+  "currency": "INR",
+  "period_start": "2025-08-31",
+  "period_end": "2025-09-27",
+  "opening_balance": "624276.08",
+  "closing_balance": "611026.61",
+  "balance_policy": "none",
+  "transactions": [
+   {
+    "seq": 0,
+    "posted": "2025-09-03",
+    "value_date": null,
+    "description": "UPI/131959707170/BESCOM PAYMENT FROM PHONE",
+    "debit": "1672.51",
+    "credit": "0",
+    "balance": null,
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 1,
+    "posted": "2025-09-04",
+    "value_date": null,
+    "description": "CARD PURCHASE IRCTC 4724",
+    "debit": "107.99",
+    "credit": "0",
+    "balance": null,
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 2,
+    "posted": "2025-09-05",
+    "value_date": null,
+    "description": "UPI/668058255369/AIRTEL PAYMENT FROM PHONE",
+    "debit": "1780.87",
+    "credit": "0",
+    "balance": null,
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 3,
+    "posted": "2025-09-06",
+    "value_date": null,
+    "description": "INTEREST CREDIT FOR THE PERIOD",
+    "debit": "0",
+    "credit": "652.48",
+    "balance": null,
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 4,
+    "posted": "2025-09-06",
+    "value_date": null,
+    "description": "UPI CR FROM KABIR SINGH 92641570 SPLIT BILL",
+    "debit": "0",
+    "credit": "18769.60",
+    "balance": null,
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 5,
+    "posted": "2025-09-07",
+    "value_date": null,
+    "description": "UPI/887103855776/TATA POWER PAYMENT FROM PHONE",
+    "debit": "80.46",
+    "credit": "0",
+    "balance": null,
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 6,
+    "posted": "2025-09-09",
+    "value_date": null,
+    "description": "CARD PURCHASE AIRTEL 5111",
+    "debit": "518.92",
+    "credit": "0",
+    "balance": null,
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 7,
+    "posted": "2025-09-10",
+    "value_date": null,
+    "description": "CARD PURCHASE BOOKMYSHOW 2664",
+    "debit": "1843.56",
+    "credit": "0",
+    "balance": null,
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 8,
+    "posted": "2025-09-21",
+    "value_date": null,
+    "description": "POS 751477 UBER STORE 58",
+    "debit": "7965.35",
+    "credit": "0",
+    "balance": null,
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 9,
+    "posted": "2025-09-24",
+    "value_date": null,
+    "description": "UPI/188659438918/BIGBASKET PAYMENT FROM PHONE",
+    "debit": "804.89",
+    "credit": "0",
+    "balance": null,
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 10,
+    "posted": "2025-09-27",
+    "value_date": null,
+    "description": "POS 242943 AMAZON PAY STORE 62",
+    "debit": "17897.00",
+    "credit": "0",
+    "balance": null,
+    "reference": null,
+    "source": null
+   }
+  ],
+  "provenance": {
+   "tier": 0,
+   "profile_id": "forge:no_balance",
+   "profile_version": null,
+   "model_id": null,
+   "prompt_hash": null
+  }
+ }
+}

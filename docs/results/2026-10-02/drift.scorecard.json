@@ -1,0 +1,130 @@
+{
+ "manifest": {
+  "started_at": "2026-10-02T18:11:30+00:00",
+  "git_sha": "not-a-git-repo",
+  "dirty": null,
+  "profiles": {
+   "drcr_suffix": 1,
+   "ledger_split": 1,
+   "no_balance": 1,
+   "paren_negative": 1,
+   "signed_single": 1,
+   "split_zero_filled": 2
+  },
+  "llm": "none",
+  "prompt_hash": "e3db47f5d35e05f8",
+  "cache_mode": "replay",
+  "corpus": "corpus/drift",
+  "corpus_docs": 160,
+  "corpus_sha": "ae9953fbd97eea6f",
+  "python": "3.12.8",
+  "platform": "macOS-15.5-arm64-arm-64bit"
+ },
+ "overall": {
+  "docs": 160,
+  "accepted": 0,
+  "needs_review": 160,
+  "rejected": 0,
+  "silent_wrong": 0,
+  "truth_rows": 6322,
+  "agreed_rows": 0,
+  "exact_docs": 0,
+  "tier1_accepted": 0,
+  "tier2_accepted": 0,
+  "tokens_in": 0,
+  "tokens_out": 0,
+  "reasons": {
+   "RESCUE_UNAVAILABLE": 160,
+   "UNKNOWN_LAYOUT": 160
+  },
+  "coverage": 0.0,
+  "silent_wrong_rate": 0.0,
+  "row_agreement": 0.0
+ },
+ "by_layout": {
+  "drcr_suffix_v2": {
+   "docs": 40,
+   "accepted": 0,
+   "needs_review": 40,
+   "rejected": 0,
+   "silent_wrong": 0,
+   "truth_rows": 1709,
+   "agreed_rows": 0,
+   "exact_docs": 0,
+   "tier1_accepted": 0,
+   "tier2_accepted": 0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "reasons": {
+    "RESCUE_UNAVAILABLE": 40,
+    "UNKNOWN_LAYOUT": 40
+   },
+   "coverage": 0.0,
+   "silent_wrong_rate": 0.0,
+   "row_agreement": 0.0
+  },
+  "ledger_split_v2": {
+   "docs": 40,
+   "accepted": 0,
+   "needs_review": 40,
+   "rejected": 0,
+   "silent_wrong": 0,
+   "truth_rows": 1495,
+   "agreed_rows": 0,
+   "exact_docs": 0,
+   "tier1_accepted": 0,
+   "tier2_accepted": 0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "reasons": {
+    "RESCUE_UNAVAILABLE": 40,
+    "UNKNOWN_LAYOUT": 40
+   },
+   "coverage": 0.0,
+   "silent_wrong_rate": 0.0,
+   "row_agreement": 0.0
+  },
+  "paren_negative_v2": {
+   "docs": 40,
+   "accepted": 0,
+   "needs_review": 40,
+   "rejected": 0,
+   "silent_wrong": 0,
+   "truth_rows": 1627,
+   "agreed_rows": 0,
+   "exact_docs": 0,
+   "tier1_accepted": 0,
+   "tier2_accepted": 0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "reasons": {
+    "RESCUE_UNAVAILABLE": 40,
+    "UNKNOWN_LAYOUT": 40
+   },
+   "coverage": 0.0,
+   "silent_wrong_rate": 0.0,
+   "row_agreement": 0.0
+  },
+  "signed_single_v2": {
+   "docs": 40,
+   "accepted": 0,
+   "needs_review": 40,
+   "rejected": 0,
+   "silent_wrong": 0,
+   "truth_rows": 1491,
+   "agreed_rows": 0,
+   "exact_docs": 0,
+   "tier1_accepted": 0,
+   "tier2_accepted": 0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "reasons": {
+    "RESCUE_UNAVAILABLE": 40,
+    "UNKNOWN_LAYOUT": 40
+   },
+   "coverage": 0.0,
+   "silent_wrong_rate": 0.0,
+   "row_agreement": 0.0
+  }
+ }
+}

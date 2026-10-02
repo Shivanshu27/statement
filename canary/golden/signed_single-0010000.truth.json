@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "layout": "signed_single",
+  "seed": 10000,
+  "split": "canary",
+  "forge_version": 1
+ },
+ "statement": {
+  "doc_id": "9442fe1dc904de325ba0ba16621065f8cefdc38206e3b1504161a816f41b4f1e",
+  "account": "XXXX2369",
+  "currency": "USD",
+  "period_start": "2026-03-27",
+  "period_end": "2026-05-06",
+  "opening_balance": "21819.87",
+  "closing_balance": "27494.68",
+  "balance_policy": "every_row",
+  "transactions": [
+   {
+    "seq": 0,
+    "posted": "2026-03-28",
+    "value_date": null,
+    "description": "UPI CR FROM NISHA GUPTA 79189699 SPLIT BILL",
+    "debit": "0",
+    "credit": "59.62",
+    "balance": "21879.49",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 1,
+    "posted": "2026-03-31",
+    "value_date": null,
+    "description": "CARD PURCHASE AIRTEL 4571",
+    "debit": "96.35",
+    "credit": "0",
+    "balance": "21783.14",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 2,
+    "posted": "2026-04-04",
+    "value_date": null,
+    "description": "CARD PURCHASE APOLLO PHARMACY 1359",
+    "debit": "16.29",
+    "credit": "0",
+    "balance": "21766.85",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 3,
+    "posted": "2026-04-08",
+    "value_date": null,
+    "description": "CARD PURCHASE AIRTEL 2712",
+    "debit": "103.30",
+    "credit": "0",
+    "balance": "21663.55",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 4,
+    "posted": "2026-04-10",
+    "value_date": null,
+    "description": "CARD PURCHASE IRCTC 2329",
+    "debit": "93.53",
+    "credit": "0",
+    "balance": "21570.02",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 5,
+    "posted": "2026-04-16",
+    "value_date": null,
+    "description": "CARD PURCHASE CROMA 7109",
+    "debit": "81.69",
+    "credit": "0",
+    "balance": "21488.33",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 6,
+    "posted": "2026-04-16",
+    "value_date": null,
+    "description": "NEFT CR 5217995701 CONTOSO SYSTEMS SALARY",
+    "debit": "0",
+    "credit": "6212.88",
+    "balance": "27701.21",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 7,
+    "posted": "2026-04-20",
+    "value_date": null,
+    "description": "CARD PURCHASE AIRTEL 4769",
+    "debit": "104.19",
+    "credit": "0",
+    "balance": "27597.02",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 8,
+    "posted": "2026-04-24",
+    "value_date": null,
+    "description": "CARD PURCHASE BESCOM 0330",
+    "debit": "4.53",
+    "credit": "0",
+    "balance": "27592.49",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 9,
+    "posted": "2026-05-02",
+    "value_date": null,
+    "description": "ATM WDL 595155 CASH WITHDRAWAL",
+    "debit": "180.00",
+    "credit": "0",
+    "balance": "27412.49",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 10,
+    "posted": "2026-05-02",
+    "value_date": null,
+    "description": "INTEREST CREDIT FOR THE PERIOD",
+    "debit": "0",
+    "credit": "82.19",
+    "balance": "27494.68",
+    "reference": null,
+    "source": null
+   }
+  ],
+  "provenance": {
+   "tier": 0,
+   "profile_id": "forge:signed_single",
+   "profile_version": null,
+   "model_id": null,
+   "prompt_hash": null
+  }
+ }
+}

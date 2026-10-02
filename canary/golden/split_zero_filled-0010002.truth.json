@@ -1,0 +1,170 @@
+{
+ "meta": {
+  "layout": "split_zero_filled",
+  "seed": 10002,
+  "split": "canary",
+  "forge_version": 1
+ },
+ "statement": {
+  "doc_id": "1b4f7498e292403473f01a7baec5e08d8461ed0b3895673b94a53c5bebbba322",
+  "account": "XXXX6987",
+  "currency": "GBP",
+  "period_start": "2025-05-02",
+  "period_end": "2025-06-07",
+  "opening_balance": "15482.83",
+  "closing_balance": "13055.02",
+  "balance_policy": "every_row",
+  "transactions": [
+   {
+    "seq": 0,
+    "posted": "2025-05-08",
+    "value_date": null,
+    "description": "CARD PURCHASE SPOTIFY 5813",
+    "debit": "149.60",
+    "credit": "0",
+    "balance": "15333.23",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 1,
+    "posted": "2025-05-09",
+    "value_date": null,
+    "description": "CARD PURCHASE BESCOM 8081",
+    "debit": "64.13",
+    "credit": "0",
+    "balance": "15269.10",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 2,
+    "posted": "2025-05-13",
+    "value_date": null,
+    "description": "CARD PURCHASE DECATHLON 1469",
+    "debit": "88.97",
+    "credit": "0",
+    "balance": "15180.13",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 3,
+    "posted": "2025-05-14",
+    "value_date": null,
+    "description": "REFUND DMART ORDER 35077538",
+    "debit": "0",
+    "credit": "116.38",
+    "balance": "15296.51",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 4,
+    "posted": "2025-05-17",
+    "value_date": null,
+    "description": "UPI CR FROM ROHAN DAS 36872147 SPLIT BILL",
+    "debit": "0",
+    "credit": "399.04",
+    "balance": "15695.55",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 5,
+    "posted": "2025-05-19",
+    "value_date": null,
+    "description": "POS 403587 OLA STORE 25",
+    "debit": "881.84",
+    "credit": "0",
+    "balance": "14813.71",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 6,
+    "posted": "2025-05-22",
+    "value_date": null,
+    "description": "CARD PURCHASE CROMA 1276",
+    "debit": "18.85",
+    "credit": "0",
+    "balance": "14794.86",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 7,
+    "posted": "2025-05-24",
+    "value_date": null,
+    "description": "CARD PURCHASE MAKEMYTRIP 1143",
+    "debit": "63.34",
+    "credit": "0",
+    "balance": "14731.52",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 8,
+    "posted": "2025-05-27",
+    "value_date": null,
+    "description": "POS 288576 ZOMATO STORE 16",
+    "debit": "1168.50",
+    "credit": "0",
+    "balance": "13563.02",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 9,
+    "posted": "2025-06-03",
+    "value_date": null,
+    "description": "POS 638349 AIRTEL STORE 95",
+    "debit": "525.47",
+    "credit": "0",
+    "balance": "13037.55",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 10,
+    "posted": "2025-06-03",
+    "value_date": null,
+    "description": "CARD PURCHASE BESCOM 8887",
+    "debit": "54.11",
+    "credit": "0",
+    "balance": "12983.44",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 11,
+    "posted": "2025-06-03",
+    "value_date": null,
+    "description": "CARD PURCHASE BESCOM 8887",
+    "debit": "54.11",
+    "credit": "0",
+    "balance": "12929.33",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 12,
+    "posted": "2025-06-05",
+    "value_date": null,
+    "description": "REFUND NETFLIX ORDER 46034087",
+    "debit": "0",
+    "credit": "125.69",
+    "balance": "13055.02",
+    "reference": null,
+    "source": null
+   }
+  ],
+  "provenance": {
+   "tier": 0,
+   "profile_id": "forge:split_zero_filled",
+   "profile_version": null,
+   "model_id": null,
+   "prompt_hash": null
+  }
+ }
+}

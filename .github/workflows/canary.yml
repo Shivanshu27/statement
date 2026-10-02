@@ -1,0 +1,36 @@
+name: drift-canary
+
+# H5: does the hosted model change under fixed inputs? Daily, ~30 pages.
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  canary:
+    runs-on: ubuntu-latest
+    env:
+      STATEMENT_LLM: anthropic
+      STATEMENT_ANTHROPIC_API_KEY: ${{ secrets.STATEMENT_ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - if: env.STATEMENT_ANTHROPIC_API_KEY != ''
+        id: run
+        run: |
+          uv sync --frozen
+          set +e
+          uv run --frozen statement canary canary/golden --history canary/history | tee canary.txt
+          echo "code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+      - if: env.STATEMENT_ANTHROPIC_API_KEY != ''
+        run: |
+          git config user.name "drift-canary"
+          git config user.email "canary@users.noreply.github.com"
+          git add canary/history && git commit -m "canary: observation" && git push
+      - if: steps.run.outputs.code == '1'
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: gh issue create --title "Model drift detected $(date -u +%F)" --body-file canary.txt --label drift

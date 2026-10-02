@@ -1,0 +1,158 @@
+[project]
+name = "statement"
+version = "0.1.0"
+description = "Bank-statement PDFs to verified transactions. Deterministic first, LLM rescue second, arithmetic decides."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Shivanshu Singla" }]
+keywords = ["pdf", "bank-statement", "extraction", "llm", "evals", "guardrails"]
+
+dependencies = [
+    "pydantic>=2.7,<3",
+    "pyyaml>=6.0,<7",
+    "typer>=0.12,<1",
+    "pdfplumber>=0.11,<0.12",
+    "reportlab>=4.2,<5",
+    "httpx>=0.27,<1",
+]
+
+[project.scripts]
+statement = "statement.cli.main:app"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.2",
+    "pytest-cov>=5.0",
+    "hypothesis>=6.100",
+    "ruff>=0.5",
+    "mypy>=1.10",
+    "import-linter>=2.0",
+    "types-PyYAML",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/statement"]
+
+# ---------------------------------------------------------------- uv
+
+[tool.uv]
+# Everything resolves from public PyPI. A corporate mirror captured in the
+# lockfile leaks internal hostnames and breaks for everyone else (G5 trap).
+index-url = "https://pypi.org/simple"
+
+# ---------------------------------------------------------------- ruff
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+src = ["src", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = [
+    "E", "W",    # pycodestyle
+    "F",         # pyflakes
+    "I",         # isort
+    "B",         # bugbear
+    "UP",        # pyupgrade
+    "DTZ",       # naive datetimes are bugs
+    "S",         # bandit-lite
+    "SIM",
+    "RUF",
+    "TID",       # banned APIs (see below)
+]
+ignore = [
+    "S101",      # assert is fine in tests and for internal invariants
+    "S603", "S607",  # subprocess in scripts is deliberate
+    "RUF001", "RUF002", "RUF003",  # unicode minus / rupee sign are data here
+    "E501",      # ruff format owns line length; long literals (HTML, prompts) are fine
+]
+
+[tool.ruff.lint.flake8-bugbear]
+# Frozen dataclasses are immutable defaults.
+extend-immutable-calls = ["statement.pipeline.run.Limits", "statement.rescue.tier2.Budget"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S", "DTZ"]
+# Seeded, reproducible randomness for synthetic data, never for security.
+"src/statement/forge/**" = ["S311"]
+"src/statement/evaluate/corrupt.py" = ["S311"]
+
+[tool.ruff.lint.flake8-tidy-imports.banned-api]
+# INV-09: money never touches float. `float(` itself can't be banned by ruff,
+# so the runtime boundary check in domain/money.py is the real enforcement and
+# scripts/check_no_float.py greps domain/ in CI.
+"math.fsum".msg = "money is Decimal; float summation is banned (INV-09)"
+
+# ---------------------------------------------------------------- mypy
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+plugins = ["pydantic.mypy"]
+mypy_path = "src"
+packages = ["statement"]
+
+[[tool.mypy.overrides]]
+module = ["pdfplumber.*", "reportlab.*"]
+ignore_missing_imports = true
+
+# ---------------------------------------------------------------- pytest
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--strict-markers"
+filterwarnings = ["error"]
+markers = [
+    "slow: renders and parses real PDFs",
+]
+
+[tool.coverage.run]
+source = ["statement"]
+branch = true
+
+[tool.coverage.report]
+fail_under = 85
+show_missing = true
+
+# ---------------------------------------------------------------- import-linter
+# The rings of BUILD-PLAN §C4, enforced. Dependencies point inward only.
+
+[tool.importlinter]
+root_package = "statement"
+include_external_packages = true
+
+[[tool.importlinter.contracts]]
+name = "Rings: entrypoints > adapters > application > domain"
+type = "layers"
+layers = [
+    "statement.cli",
+    "statement.adapters",
+    "statement.evaluate | statement.forge",
+    "statement.pipeline",
+    "statement.rescue | statement.extract",
+    "statement.ports",
+    "statement.domain",
+]
+
+[[tool.importlinter.contracts]]
+name = "Domain is pure: no I/O libraries"
+type = "forbidden"
+source_modules = ["statement.domain"]
+forbidden_modules = ["pdfplumber", "reportlab", "httpx", "yaml", "typer"]
+
+[[tool.importlinter.contracts]]
+name = "INV-05: the LLM side never sees the verifier"
+type = "forbidden"
+source_modules = ["statement.rescue"]
+forbidden_modules = ["statement.domain.verify"]
+
+[[tool.importlinter.contracts]]
+name = "The scorer is not on the product path"
+type = "forbidden"
+source_modules = ["statement.pipeline", "statement.extract", "statement.rescue"]
+forbidden_modules = ["statement.evaluate", "statement.forge"]

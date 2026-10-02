@@ -1,0 +1,25 @@
+# One signed amount column (minus = debit), US dates, summary above the table.
+id: signed_single
+version: 1
+description: Single signed amount column with running balance (USD)
+fingerprint:
+  required_tokens: ["Account Statement", "Beginning Balance", "All amounts in USD"]
+currency: USD
+columns:
+  - {role: posted, header: "Date"}
+  - {role: description, header: "Description"}
+  - {role: amount, header: "Amount"}
+  - {role: balance, header: "Balance"}
+locale: dot
+date_format: "%m/%d/%Y"
+amount_mode: signed
+balance_policy: every_row
+period:
+  pattern: 'Statement Period: (\S+) - (\S+)'
+  format: "%m/%d/%Y"
+opening: {label: "Beginning Balance"}
+closing: {label: "Ending Balance"}
+account: {label: "Member Account Number:"}
+rows:
+  skip_patterns: ['^\*\*\*']
+  stop_patterns: ['^Page \d+ of \d+$']

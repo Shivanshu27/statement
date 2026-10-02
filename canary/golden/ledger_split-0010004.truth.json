@@ -1,0 +1,137 @@
+{
+ "meta": {
+  "layout": "ledger_split",
+  "seed": 10004,
+  "split": "canary",
+  "forge_version": 1
+ },
+ "statement": {
+  "doc_id": "3cd423cc092cd5f5a7d21cc25a4e3490cb4e0082ff4cb6b33c69552e70630fbe",
+  "account": "XXXX7770",
+  "currency": "INR",
+  "period_start": "2024-05-22",
+  "period_end": "2024-06-27",
+  "opening_balance": "2211909.12",
+  "closing_balance": "2198289.40",
+  "balance_policy": "every_row",
+  "transactions": [
+   {
+    "seq": 0,
+    "posted": "2024-05-25",
+    "value_date": "2024-05-25",
+    "description": "UPI CR FROM DEV MALHOTRA 93390723 SPLIT BILL",
+    "debit": "0",
+    "credit": "7934.03",
+    "balance": "2219843.15",
+    "reference": "7604849542264369",
+    "source": null
+   },
+   {
+    "seq": 1,
+    "posted": "2024-05-26",
+    "value_date": "2024-05-26",
+    "description": "POS 175086 CROMA STORE 53",
+    "debit": "14731.18",
+    "credit": "0",
+    "balance": "2205111.97",
+    "reference": "1333912473505997",
+    "source": null
+   },
+   {
+    "seq": 2,
+    "posted": "2024-05-26",
+    "value_date": "2024-05-26",
+    "description": "UPI/434803414152/UBER PAYMENT FROM PHONE",
+    "debit": "324.34",
+    "credit": "0",
+    "balance": "2204787.63",
+    "reference": "8592783837071140",
+    "source": null
+   },
+   {
+    "seq": 3,
+    "posted": "2024-05-30",
+    "value_date": "2024-05-30",
+    "description": "POS 270424 IRCTC STORE 97",
+    "debit": "22709.45",
+    "credit": "0",
+    "balance": "2182078.18",
+    "reference": "3517037695058201",
+    "source": null
+   },
+   {
+    "seq": 4,
+    "posted": "2024-06-01",
+    "value_date": "2024-06-01",
+    "description": "UPI CR FROM DEV MALHOTRA 94091386 SPLIT BILL",
+    "debit": "0",
+    "credit": "23475.21",
+    "balance": "2205553.39",
+    "reference": "5576561991838240",
+    "source": null
+   },
+   {
+    "seq": 5,
+    "posted": "2024-06-03",
+    "value_date": "2024-06-03",
+    "description": "INTEREST CREDIT FOR THE PERIOD",
+    "debit": "0",
+    "credit": "1259.86",
+    "balance": "2206813.25",
+    "reference": "2885100255293087",
+    "source": null
+   },
+   {
+    "seq": 6,
+    "posted": "2024-06-05",
+    "value_date": "2024-06-05",
+    "description": "REFUND OLA ORDER 65086117",
+    "debit": "0",
+    "credit": "447.53",
+    "balance": "2207260.78",
+    "reference": "0250014265878118",
+    "source": null
+   },
+   {
+    "seq": 7,
+    "posted": "2024-06-10",
+    "value_date": "2024-06-10",
+    "description": "ATM WDL 272758 CASH WITHDRAWAL",
+    "debit": "8500.00",
+    "credit": "0",
+    "balance": "2198760.78",
+    "reference": "6932186669653049",
+    "source": null
+   },
+   {
+    "seq": 8,
+    "posted": "2024-06-12",
+    "value_date": "2024-06-12",
+    "description": "REFUND CROMA ORDER 67439089",
+    "debit": "0",
+    "credit": "1434.14",
+    "balance": "2200194.92",
+    "reference": "1068160551602083",
+    "source": null
+   },
+   {
+    "seq": 9,
+    "posted": "2024-06-15",
+    "value_date": "2024-06-15",
+    "description": "ACCOUNT MAINTENANCE FEE",
+    "debit": "1905.52",
+    "credit": "0",
+    "balance": "2198289.40",
+    "reference": "8675534844486563",
+    "source": null
+   }
+  ],
+  "provenance": {
+   "tier": 0,
+   "profile_id": "forge:ledger_split",
+   "profile_version": null,
+   "model_id": null,
+   "prompt_hash": null
+  }
+ }
+}

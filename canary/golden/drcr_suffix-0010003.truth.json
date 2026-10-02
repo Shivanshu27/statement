@@ -1,0 +1,126 @@
+{
+ "meta": {
+  "layout": "drcr_suffix",
+  "seed": 10003,
+  "split": "canary",
+  "forge_version": 1
+ },
+ "statement": {
+  "doc_id": "2379dbab7a9eb3895a2d459555dfac2c2881a15d2f8e25c18813c1194c532c6f",
+  "account": "XXXX6544",
+  "currency": "INR",
+  "period_start": "2026-06-11",
+  "period_end": "2026-07-10",
+  "opening_balance": "1589319.69",
+  "closing_balance": "1584774.50",
+  "balance_policy": "every_row",
+  "transactions": [
+   {
+    "seq": 0,
+    "posted": "2026-06-14",
+    "value_date": null,
+    "description": "CARD PURCHASE AMAZON PAY 1355",
+    "debit": "420.54",
+    "credit": "0",
+    "balance": "1588899.15",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 1,
+    "posted": "2026-06-14",
+    "value_date": null,
+    "description": "CARD PURCHASE AMAZON PAY 1355",
+    "debit": "420.54",
+    "credit": "0",
+    "balance": "1588478.61",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 2,
+    "posted": "2026-06-22",
+    "value_date": null,
+    "description": "CARD PURCHASE BIGBASKET 7697",
+    "debit": "1696.43",
+    "credit": "0",
+    "balance": "1586782.18",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 3,
+    "posted": "2026-06-22",
+    "value_date": null,
+    "description": "POS 808985 BLUE TOKAI STORE 72",
+    "debit": "9851.01",
+    "credit": "0",
+    "balance": "1576931.17",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 4,
+    "posted": "2026-07-02",
+    "value_date": null,
+    "description": "POS 845204 DMART STORE 09",
+    "debit": "24351.46",
+    "credit": "0",
+    "balance": "1552579.71",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 5,
+    "posted": "2026-07-04",
+    "value_date": null,
+    "description": "INTEREST CREDIT FOR THE PERIOD",
+    "debit": "0",
+    "credit": "528.22",
+    "balance": "1553107.93",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 6,
+    "posted": "2026-07-06",
+    "value_date": null,
+    "description": "UPI CR FROM MEERA IYER 75654163 SPLIT BILL",
+    "debit": "0",
+    "credit": "10256.84",
+    "balance": "1563364.77",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 7,
+    "posted": "2026-07-07",
+    "value_date": null,
+    "description": "UPI CR FROM VIKRAM MEHTA 14990470 SPLIT BILL",
+    "debit": "0",
+    "credit": "23395.01",
+    "balance": "1586759.78",
+    "reference": null,
+    "source": null
+   },
+   {
+    "seq": 8,
+    "posted": "2026-07-07",
+    "value_date": null,
+    "description": "UPI/128484587591/UBER PAYMENT FROM PHONE",
+    "debit": "1985.28",
+    "credit": "0",
+    "balance": "1584774.50",
+    "reference": null,
+    "source": null
+   }
+  ],
+  "provenance": {
+   "tier": 0,
+   "profile_id": "forge:drcr_suffix",
+   "profile_version": null,
+   "model_id": null,
+   "prompt_hash": null
+  }
+ }
+}

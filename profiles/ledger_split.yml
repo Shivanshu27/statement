@@ -1,0 +1,30 @@
+# Separate withdrawal/deposit columns, Indian digit grouping, two-digit years,
+# summary block after the table. Note "Closing Balance" is a column header, so
+# the closing figure is read from the summary's "Closing Bal :" label instead.
+id: ledger_split
+version: 1
+description: Split debit/credit columns with reference and value date (INR)
+fingerprint:
+  required_tokens: ["Statement of Account", "Withdrawal Amt.", "Deposit Amt."]
+currency: INR
+columns:
+  - {role: posted, header: "Date"}
+  - {role: description, header: "Narration"}
+  - {role: reference, header: "Chq./Ref.No."}
+  - {role: value_date, header: "Value Dt"}
+  - {role: debit, header: "Withdrawal Amt."}
+  - {role: credit, header: "Deposit Amt."}
+  - {role: balance, header: "Closing Balance"}
+locale: dot
+date_format: "%d/%m/%y"
+amount_mode: split
+balance_policy: every_row
+period:
+  pattern: 'Statement From : (\S+) To : (\S+)'
+  format: "%d/%m/%Y"
+opening: {label: "Opening Balance :"}
+closing: {label: "Closing Bal :"}
+account: {label: "Account No :"}
+rows:
+  skip_patterns: ['^\*\*\*']
+  stop_patterns: ['^Page \d+ of \d+$', '^STATEMENT SUMMARY']

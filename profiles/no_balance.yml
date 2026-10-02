@@ -1,0 +1,27 @@
+# Onboarded by the /add-layout skill — see docs/onboarding/no_balance.md.
+# No running balance column: only INV-01 (totals) constrains the amounts, so
+# documents of this layout are accepted with reduced trust (ADR-0014).
+id: no_balance
+version: 1
+description: Withdrawals/deposits with no running balance; summary after the table (INR)
+fingerprint:
+  required_tokens: ["Transaction Statement", "Withdrawals", "Deposits"]
+currency: INR
+columns:
+  - {role: posted, header: "Txn Date"}
+  - {role: description, header: "Description"}
+  - {role: debit, header: "Withdrawals"}
+  - {role: credit, header: "Deposits"}
+locale: dot
+date_format: "%d-%b-%Y"
+amount_mode: split
+balance_policy: none
+period:
+  pattern: 'Period: (\d{2}-\w{3}-\d{4}) to (\d{2}-\w{3}-\d{4})'
+  format: "%d-%b-%Y"
+opening: {label: "Opening balance"}
+closing: {label: "Closing balance"}
+account: {label: "Account:"}
+rows:
+  skip_patterns: ['^\*\*\*']
+  stop_patterns: ['^Page \d+ of \d+$', '^Opening balance']

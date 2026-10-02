@@ -1,0 +1,99 @@
+{
+ "manifest": {
+  "started_at": "2026-10-02T18:11:42+00:00",
+  "git_sha": "not-a-git-repo",
+  "dirty": null,
+  "profiles": {
+   "drcr_suffix": 1,
+   "ledger_split": 1,
+   "no_balance": 1,
+   "paren_negative": 1,
+   "signed_single": 1,
+   "split_zero_filled": 2
+  },
+  "llm": "none",
+  "prompt_hash": "e3db47f5d35e05f8",
+  "cache_mode": "replay",
+  "corpus": "corpus/holdout",
+  "corpus_docs": 240,
+  "corpus_sha": "13526c231cf0e9c5",
+  "python": "3.12.8",
+  "platform": "macOS-15.5-arm64-arm-64bit",
+  "trials": 3
+ },
+ "detectable_rate": 1.0,
+ "by_failure": {
+  "F01_row_dropped": {
+   "applied": 720,
+   "detected": 720,
+   "by_construction": 0,
+   "expected_detectable": true
+  },
+  "F02_row_duplicated": {
+   "applied": 720,
+   "detected": 720,
+   "by_construction": 0,
+   "expected_detectable": true
+  },
+  "F03_direction_swapped": {
+   "applied": 720,
+   "detected": 720,
+   "by_construction": 0,
+   "expected_detectable": true
+  },
+  "F04_digits_transposed": {
+   "applied": 720,
+   "detected": 720,
+   "by_construction": 0,
+   "expected_detectable": true
+  },
+  "F05_rows_merged": {
+   "applied": 720,
+   "detected": 720,
+   "by_construction": 0,
+   "expected_detectable": true
+  },
+  "F06_description_misattached": {
+   "applied": 720,
+   "detected": 0,
+   "by_construction": 0,
+   "expected_detectable": false
+  },
+  "F07_wrong_year": {
+   "applied": 720,
+   "detected": 720,
+   "by_construction": 0,
+   "expected_detectable": true
+  },
+  "F08_day_month_swapped": {
+   "applied": 720,
+   "detected": 720,
+   "by_construction": 0,
+   "expected_detectable": true
+  },
+  "F09_locale_misread": {
+   "applied": 720,
+   "detected": 720,
+   "by_construction": 0,
+   "expected_detectable": true
+  },
+  "F10_summary_read_as_txn": {
+   "applied": 720,
+   "detected": 720,
+   "by_construction": 0,
+   "expected_detectable": true
+  },
+  "F12_zero_read_as_missing": {
+   "applied": 600,
+   "detected": 600,
+   "by_construction": 0,
+   "expected_detectable": true
+  },
+  "F13_compensating_errors": {
+   "applied": 720,
+   "detected": 0,
+   "by_construction": 0,
+   "expected_detectable": false
+  }
+ }
+}
