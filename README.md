@@ -213,12 +213,12 @@ scripts/       CI guards · onboarding intake
 - **Text-layer PDFs only.** Scanned statements are `REJECTED` (`NO_TEXT_LAYER`).
 - **No real LLM has been run.** Tier 2 is verified with scripted test
   doubles. H3 and H5 are open.
-- **CI workflows are written but have not run yet.** The repo has not been
-  pushed.
+- **CI runs on every push and is green.** The holdout and regression jobs
+  run on pull requests; the holdout needs a `STATEMENT_HOLDOUT_SECRET` repo secret.
 - **The onboarding trials are not blind.** See the onboarding reports.
 
 ## Status
 
 v0.1. Increments M0–M7 of the plan are built and measured. M8 (operate) is
 built but not live: the canary needs an API key and four weeks of history.
-M9 (a stranger reproduces the numbers) is pending a public repository. MIT licensed.
+The repository is public; M9 (a stranger reproduces the numbers) is open. MIT licensed.
